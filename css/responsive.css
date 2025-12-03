@@ -1,0 +1,100 @@
+/* Responsive Design */
+
+@media (max-width: 992px) {
+    .gallery-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid-masonry {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-list li {
+        margin: 20px 0;
+    }
+
+    /* Hero */
+    .names {
+        font-size: 2.5rem;
+    }
+
+    .script-font {
+        font-size: 3rem;
+    }
+
+    /* Couple Info */
+    .couple-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .couple-divider {
+        transform: rotate(90deg);
+    }
+
+    /* Timeline */
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::after {
+        left: 21px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        text-align: left;
+    }
+
+    .timeline-item.left .icon,
+    .timeline-item.right .icon {
+        left: auto;
+        right: 20px;
+    }
+
+    /* Gallery */
+    .gallery-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid-masonry {
+        column-count: 1;
+    }
+
+    /* Dress Code */
+    .colors {
+        flex-wrap: wrap;
+    }
+}
